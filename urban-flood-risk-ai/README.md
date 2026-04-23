@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 # urban-flood-risk-ai
+
 AI-powered framework for site-specific urban flood risk prediction and flood mapping using geospatial and SAR-inspired data.
 
-This project presents a site-specific, machine learning–based framework for predicting urban flood risk and generating flood vulnerability maps for undeveloped and emerging urban regions in India.
-The system integrates geospatial, environmental, and SAR-inspired features to estimate flood risk before construction, enabling data-driven and resilient urban planning.
-=======
+This project presents a site-specific, machine learning–based framework for predicting urban flood risk and generating flood vulnerability maps for undeveloped and emerging urban regions in India. The system integrates geospatial, environmental, and SAR-inspired features to estimate flood risk before construction, enabling data-driven and resilient urban planning.
+
 # Urban Flood Risk Synthetic Dataset
 
 This repository contains a **synthetic urban flood‑risk dataset** designed for experimenting with machine‑learning models (regression, classification, random forests, neural networks, etc.).
@@ -58,4 +57,3 @@ plt.show()
 
 ## License
 This synthetic data is released under the MIT License – feel free to adapt, extend, or use it for research and demos.
->>>>>>> 13e1ace (Add synthetic flood risk dataset generator and CSV)
