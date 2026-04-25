@@ -9,7 +9,7 @@ def main():
     df = pd.read_csv('urban_flood_risk_dataset.csv')
     
     # 2. Preprocess the Data identically so our Map Generators don't break
-    X = df.drop(['flood_risk_score', 'flood_risk_category'], axis=1)
+    X = df.drop(['flood_risk_score', 'flood_risk_category', 'lat', 'lon', 'region'], axis=1, errors='ignore')
     y = df['flood_risk_category']
     X = pd.get_dummies(X, columns=['soil_type'], drop_first=False)
     

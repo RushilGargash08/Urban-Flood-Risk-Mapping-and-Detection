@@ -46,8 +46,8 @@ def logic_chiplun(lat, lon):
         return {'elevation_m': round(150 + (dist * 10000), 2), 'slope_percent': round(random.uniform(15, 30), 2), 'distance_to_water_body_km': round(dist * 50, 2), 'rainfall_mm_per_day': round(random.uniform(50, 100), 2), 'built_up_percentage': round(random.uniform(0, 5), 2), 'drainage_density': round(random.uniform(2, 4), 2), 'sar_backscatter_coefficient': round(random.uniform(-20, -15), 2), 'surface_roughness_index': round(random.uniform(0.2, 0.6), 3), 'moisture_index': round(random.uniform(0.3, 0.5), 3), 'soil_type': 'clay'}
 
 def main():
-    print("1. Loading the trained Random Forest model...")
-    model = joblib.load('random_forest_flood_model.pkl')
+    print("1. Loading the Elite Unified Weighted Ensemble Model...")
+    model = joblib.load('unified_weighted_ensemble.pkl')
     
     print("2. Generating and concatenating spatial data for all 4 distinct regions...")
     # Generate 400 data points per region = 1600 Total Points
