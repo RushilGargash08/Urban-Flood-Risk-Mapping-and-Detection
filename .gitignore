@@ -1,0 +1,9 @@
+Findings_and_Results_Draft.md
+Methodology_Draft.md
+.DS_Store
+__pycache__/
+*.pyc
+*.pkl
+results/*.html
+!results/V3_FINAL_API_MAP.html
+!results/GRAPHICAL_FLOOD_EXTENT_MAP.html

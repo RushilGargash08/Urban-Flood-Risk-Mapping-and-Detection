@@ -8,6 +8,7 @@ This project presents a state-of-the-art, machine learning–based framework for
 - **Unified Ensemble Architecture:** Blends **MLP Neural Networks**, **Random Forest**, and **Ridge Regression** via a soft-voting mechanism to achieve a **94.25% predictive accuracy**.
 - **Real-Time API Validation:** Integrated with the **Open-Meteo REST API** to validate predictions against historical "Temporal Peak" conditions (e.g., 2023 Monsoon and Cyclone seasons).
 - **Interactive Spatial Mapping:** Generates high-fidelity **Heatmaps** and **Point-Risk Maps** using Folium, allowing for physical visualization of risk across diverse micro-climates.
+- **SAR-Integrated Predictive Engine:** Incorporates **Calibrated SAR-Backscatter Response Proxies** (Sentinel-1 VV-band characteristics) to enhance flood vulnerability detection in urban vs. rural terrains.
 - **Topographical Physics Engine:** The model prioritizes terrain physics (Elevation, Slope, Soil Type) over uniform meteorological inputs, ensuring accurate risk assessment in high-altitude vs. low-lying regions.
 
 ## Project Structure

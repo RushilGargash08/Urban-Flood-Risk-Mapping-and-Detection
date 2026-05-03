@@ -45,11 +45,15 @@ def compile_regional_data(region_name, count, lat_bnds, lon_bnds, rain_date):
             built_up, soil, moisture, slope = round(random.uniform(40, 80), 2), 'loamy', round(random.uniform(0.4, 0.7), 3), round(random.uniform(2, 10), 2)
         else:
             built_up, soil, moisture, slope = round(random.uniform(0, 15), 2), 'sandy', round(random.uniform(0.1, 0.3), 3), round(random.uniform(10, 30), 2)
+        # Physically-informed SAR Proxy: Water (-20 to -25 dB), Urban (0 to -5 dB), Soil (-10 to -15 dB)
+        # Formula: Base (-12) + Urban Boost - Moisture Attenuation
+        sar_val = -12 + (built_up * 0.12) - (moisture * 14)
+        
         data.append({
             'lat': lats[i], 'lon': lons[i], 'rainfall_mm_per_day': rains[i], 'elevation_m': true_elev,
             'slope_percent': slope, 'built_up_percentage': built_up, 'distance_to_water_body_km': 0.5,
-            'drainage_density': 3.0, 'sar_backscatter_coefficient': -20 if true_elev > 45 else -5,
-            'surface_roughness_index': 0.2, 'moisture_index': moisture, 'soil_type': soil
+            'drainage_density': 3.0, 'sar_backscatter_coefficient': round(sar_val, 2),
+            'surface_roughness_index': 0.2 if built_up < 50 else 0.8, 'moisture_index': moisture, 'soil_type': soil
         })
     return pd.DataFrame(data)
 
