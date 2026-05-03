@@ -18,7 +18,7 @@ This project presents a state-of-the-art, machine learning–based framework for
 - **`results/`**: Final interactive `.html` outputs, including regional stress-tests for Mumbai, Chennai (Velachery), and Greater Bengaluru (Nandi Hills).
 - **`Findings_and_Results_Draft.md`**: Detailed analytical report on model performance and spatial validation findings.
 
-## 📊 Performance Benchmarks
+## Performance Benchmarks
 | Model | Accuracy | ROC-AUC |
 | :--- | :--- | :--- |
 | **Unified Ensemble** | **94.25%** | **0.992** |
